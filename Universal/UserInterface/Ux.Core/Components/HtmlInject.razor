@@ -1,0 +1,20 @@
+@namespace Ux.Core.Components
+
+
+<TelerikCard>
+    <CardHeader>
+        <CardTitle>@Header</CardTitle>
+    </CardHeader>
+    <CardBody>
+      @((MarkupString)Value)
+    </CardBody>
+</TelerikCard>
+<br />
+
+@code{
+    [Parameter]
+    public string Header { get; set; }
+
+    [Parameter]
+    public string Value { get; set; }
+}

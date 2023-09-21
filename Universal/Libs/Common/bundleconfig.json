@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "wwwroot/CdnLoad.min.js",
+    "inputFiles": [
+      "wwwroot/CdnLoad.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/CdnFetch.min.js",
+    "inputFiles": [
+      "wwwroot/CdnFetch.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/BlazorSupported.min.js",
+    "inputFiles": [
+      "wwwroot/BlazorSupported.js"
+    ]
+  }
+]

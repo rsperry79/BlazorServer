@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "../../../.build/net5.0/wwwroot/css/Ux/UxBase.css",
+    "inputFile": "Scss/UxBase.scss"
+  },
+  {
+    "outputFile": "../../../.build/net5.0/wwwroot/css/kendo/all.css",
+    "inputFile": "node_modules/@progress/kendo-theme-default/scss/all.scss"
+  },
+  {
+    "outputFile": "../../../.build/net5.0/wwwroot/css/bootstrap/bootstrap-reboot.css",
+    "inputFile": "node_modules/bootstrap-scss/bootstrap-reboot.scss"
+  },
+  {
+    "outputFile": "../../../.build/net5.0/wwwroot/css/bootstrap/bootstrap.css",
+    "inputFile": "node_modules/bootstrap-scss/bootstrap.scss"
+  },
+  {
+    "outputFile": "../../../.build/net5.0/wwwroot/js/BlazorSupported.es5.js",
+    "inputFile": "wwwroot/js/BlazorSupported.js"
+  }
+]

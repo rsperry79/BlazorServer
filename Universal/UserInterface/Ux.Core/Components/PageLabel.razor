@@ -1,0 +1,21 @@
+﻿@namespace Ux.Core.Components
+
+
+<BSCol XS="12" SM="4" MD="4" LG="4">
+    <BSRow Class="PageLabel">
+        <h3>@Header</h3>
+    </BSRow>
+</BSCol>
+
+@code {
+    [Parameter]
+    public string Header { get; set; }
+}
+
+<style>
+    .PageLabel{
+        color: black;
+        font-size:large;
+        font-weight:500;
+    }
+</style>

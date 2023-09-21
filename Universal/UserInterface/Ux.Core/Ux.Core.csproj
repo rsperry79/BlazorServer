@@ -1,0 +1,582 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Platforms>AnyCPU;x86</Platforms>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <OutputPath>bin\</OutputPath>
+	  <DebugType>full</DebugType>
+	  <DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <OutputPath>C:\Users\v-rsperry\source\repos\Table\.build\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Content Remove="package-lock.json" />
+	  <Content Remove="package.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="bundleconfig.json.bindings" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="bundleconfig.json.bindings" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\images\alpha-slider-bgr-reversed.png" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\images\alpha-slider-bgr.png" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\icons\font\WebComponentsIcons.ttf" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\map\images\markers.png" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\slider\images\slider-h.gif" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\slider\images\slider-v.gif" />
+	  <Content Include="node_modules\@progress\kendo-theme-default\scss\spreadsheet\images\image-default.png" />
+	  <Content Include="node_modules\bootstrap-scss\package.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-buttons\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-buttons\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-buttons\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-buttons\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-sheet\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-sheet\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-sheet\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\action-sheet\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\adaptive\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\adaptive\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\adaptive\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\adaptive\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\all.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\appbar\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\appbar\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\appbar\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\appbar\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\autocomplete\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\autocomplete\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\autocomplete\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\autocomplete\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\avatar\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\avatar\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\avatar\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\avatar\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\badge\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\badge\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\badge\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\badge\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\bottom-navigation\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\bottom-navigation\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\bottom-navigation\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\bottom-navigation\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\breadcrumb\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\breadcrumb\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\breadcrumb\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\breadcrumb\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\button\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\button\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\button\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\button\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\calendar\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\calendar\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\calendar\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\calendar\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\card\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\card\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\card\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\card\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chat\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chat\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chat\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chat\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\checkbox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\checkbox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\checkbox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\checkbox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chip\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chip\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chip\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\chip\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\images\alpha-slider-bgr-reversed.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\images\alpha-slider-bgr.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\colorpicker\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\combobox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\combobox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\combobox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\combobox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_animations.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_base.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_decoration.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_dragdrop.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_loading.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_resizing.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_scrollbar.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\common\_selection.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\functions\_colors.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\functions\_config-maps.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\functions\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\functions\_math.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_background-clip.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_border-radius.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_box-shadow.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_data-uri.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_decoration.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_disabled.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_gradients.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_hide-scrollbar.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_import-once.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_input-ripple.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_props.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\mixins\_typography.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\_asp-fallback.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\_color-system.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\_extra.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\core\_normalize.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\cursor\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\cursor\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\cursor\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dataviz\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dataviz\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dataviz\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dataviz\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\datetime\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\datetime\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\datetime\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\datetime\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dialog\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dialog\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dialog\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dialog\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\drawer\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\drawer\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\drawer\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\drawer\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowngrid\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowngrid\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowngrid\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdownlist\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdownlist\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdownlist\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdownlist\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowntree\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowntree\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowntree\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropdowntree\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropzone\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropzone\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropzone\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\dropzone\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\editor\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\editor\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\editor\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\editor\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\expansion-panel\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\expansion-panel\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\expansion-panel\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\expansion-panel\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\fab\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\fab\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\fab\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\fab\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filemanager\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filemanager\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filemanager\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filemanager\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filter\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filter\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filter\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\filter\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\floating-label\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\floating-label\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\floating-label\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\floating-label\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\forms\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\forms\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\forms\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\forms\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\gantt\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\gantt\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\gantt\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\gantt\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\grid\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\grid\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\grid\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\grid\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\icons\font\WebComponentsIcons.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\icons\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\icons\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\icons\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\imageeditor\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\imageeditor\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\imageeditor\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\imageeditor\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\input\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\input\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\input\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\input\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listbox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listbox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listbox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listbox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listgroup\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listgroup\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listgroup\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listgroup\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listview\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listview\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listview\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\listview\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\loader\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\loader\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\loader\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\loader\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\map\images\markers.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\map\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\map\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\map\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\map\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\maskedtextbox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\maskedtextbox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\maskedtextbox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\maskedtextbox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\mediaplayer\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\mediaplayer\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\mediaplayer\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\mediaplayer\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\menu\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\menu\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\menu\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\menu\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\messagebox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\messagebox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\messagebox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\messagebox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\multiselect\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\multiselect\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\multiselect\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\multiselect\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\no-flexbox.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\notification\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\notification\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\notification\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\notification\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\numerictextbox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\numerictextbox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\numerictextbox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\numerictextbox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\overlay\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\overlay\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\overlay\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\overlay\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pager\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pager\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pager\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pager\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\panelbar\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\panelbar\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\panelbar\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\panelbar\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pdf-viewer\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pdf-viewer\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pdf-viewer\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pdf-viewer\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pivotgrid\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pivotgrid\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pivotgrid\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\pivotgrid\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\popup\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\popup\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\popup\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\popup\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\progressbar\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\progressbar\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\progressbar\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\progressbar\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\radio\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\radio\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\radio\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\radio\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\rating\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\rating\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\rating\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\rating\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\responsivepanel\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\responsivepanel\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\responsivepanel\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\responsivepanel\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\ripple\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\ripple\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\ripple\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\ripple\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scheduler\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scheduler\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scheduler\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scheduler\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scroller\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scroller\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scroller\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scroller\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scrollview\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scrollview\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scrollview\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\scrollview\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\searchbox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\searchbox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\searchbox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\searchbox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\skeleton\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\skeleton\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\skeleton\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\skeleton\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\slider\images\slider-h.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\slider\images\slider-v.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\slider\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\slider\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\slider\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\slider\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\splitter\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\splitter\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\splitter\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\splitter\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\spreadsheet\images\image-default.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\spreadsheet\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\spreadsheet\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\spreadsheet\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\spreadsheet\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\stepper\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\stepper\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\stepper\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\stepper\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\styling\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\switch\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\switch\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\switch\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\switch\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tabstrip\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tabstrip\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tabstrip\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tabstrip\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\taskboard\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\taskboard\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\taskboard\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\taskboard\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textarea\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textarea\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textarea\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textarea\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textbox\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textbox\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textbox\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\textbox\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tilelayout\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tilelayout\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tilelayout\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tilelayout\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\timeline\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\timeline\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\timeline\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\timeline\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\toolbar\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\toolbar\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\toolbar\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\toolbar\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tooltip\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tooltip\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tooltip\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\tooltip\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treelist\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treelist\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treelist\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treelist\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treeview\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treeview\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treeview\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\treeview\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\typography\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\typography\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\typography\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\typography\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\upload\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\upload\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\upload\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\upload\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\README.md" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_border.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_display.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_flex.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_float.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_grid.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_order.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_overflow.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_pointer-events.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_position.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_resize.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_spacer.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_spacing.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_table-layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_text.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_touch-action.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_transform.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\utils\_user-select.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\validator\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\validator\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\validator\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\validator\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\window\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\window\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\window\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\window\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\wizard\_index.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\wizard\_layout.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\wizard\_theme.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\wizard\_variables.scss" />
+	  <None Include="node_modules\@progress\kendo-theme-default\scss\_variables.scss" />
+	  <None Include="node_modules\bootstrap-scss\bootstrap-grid.scss" />
+	  <None Include="node_modules\bootstrap-scss\bootstrap-reboot.scss" />
+	  <None Include="node_modules\bootstrap-scss\bootstrap-utilities.scss" />
+	  <None Include="node_modules\bootstrap-scss\bootstrap.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_floating-labels.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_form-check.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_form-control.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_form-range.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_form-select.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_form-text.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_input-group.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_labels.scss" />
+	  <None Include="node_modules\bootstrap-scss\forms\_validation.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_clearfix.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_colored-links.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_position.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_ratio.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_stretched-link.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_text-truncation.scss" />
+	  <None Include="node_modules\bootstrap-scss\helpers\_visually-hidden.scss" />
+	  <None Include="node_modules\bootstrap-scss\LICENSE" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_alert.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_border-radius.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_box-shadow.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_breakpoints.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_buttons.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_caret.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_clearfix.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_color-scheme.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_container.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_deprecate.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_forms.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_gradients.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_grid.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_image.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_list-group.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_lists.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_pagination.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_reset-text.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_resize.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_table-variants.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_text-truncate.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_transition.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_utilities.scss" />
+	  <None Include="node_modules\bootstrap-scss\mixins\_visually-hidden.scss" />
+	  <None Include="node_modules\bootstrap-scss\README.md" />
+	  <None Include="node_modules\bootstrap-scss\utilities\_api.scss" />
+	  <None Include="node_modules\bootstrap-scss\vendor\_rfs.scss" />
+	  <None Include="node_modules\bootstrap-scss\_accordion.scss" />
+	  <None Include="node_modules\bootstrap-scss\_alert.scss" />
+	  <None Include="node_modules\bootstrap-scss\_badge.scss" />
+	  <None Include="node_modules\bootstrap-scss\_breadcrumb.scss" />
+	  <None Include="node_modules\bootstrap-scss\_button-group.scss" />
+	  <None Include="node_modules\bootstrap-scss\_buttons.scss" />
+	  <None Include="node_modules\bootstrap-scss\_card.scss" />
+	  <None Include="node_modules\bootstrap-scss\_carousel.scss" />
+	  <None Include="node_modules\bootstrap-scss\_close.scss" />
+	  <None Include="node_modules\bootstrap-scss\_containers.scss" />
+	  <None Include="node_modules\bootstrap-scss\_dropdown.scss" />
+	  <None Include="node_modules\bootstrap-scss\_forms.scss" />
+	  <None Include="node_modules\bootstrap-scss\_functions.scss" />
+	  <None Include="node_modules\bootstrap-scss\_grid.scss" />
+	  <None Include="node_modules\bootstrap-scss\_helpers.scss" />
+	  <None Include="node_modules\bootstrap-scss\_images.scss" />
+	  <None Include="node_modules\bootstrap-scss\_list-group.scss" />
+	  <None Include="node_modules\bootstrap-scss\_mixins.scss" />
+	  <None Include="node_modules\bootstrap-scss\_modal.scss" />
+	  <None Include="node_modules\bootstrap-scss\_nav.scss" />
+	  <None Include="node_modules\bootstrap-scss\_navbar.scss" />
+	  <None Include="node_modules\bootstrap-scss\_offcanvas.scss" />
+	  <None Include="node_modules\bootstrap-scss\_pagination.scss" />
+	  <None Include="node_modules\bootstrap-scss\_popover.scss" />
+	  <None Include="node_modules\bootstrap-scss\_progress.scss" />
+	  <None Include="node_modules\bootstrap-scss\_reboot.scss" />
+	  <None Include="node_modules\bootstrap-scss\_root.scss" />
+	  <None Include="node_modules\bootstrap-scss\_spinners.scss" />
+	  <None Include="node_modules\bootstrap-scss\_tables.scss" />
+	  <None Include="node_modules\bootstrap-scss\_toasts.scss" />
+	  <None Include="node_modules\bootstrap-scss\_tooltip.scss" />
+	  <None Include="node_modules\bootstrap-scss\_transitions.scss" />
+	  <None Include="node_modules\bootstrap-scss\_type.scss" />
+	  <None Include="node_modules\bootstrap-scss\_utilities.scss" />
+	  <None Include="node_modules\bootstrap-scss\_variables.scss" />
+	  <None Include="package-lock.json" />
+	  <None Include="package.json" />
+	  <None Include="wwwroot\favicon.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Include="wwwroot\Iframe.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Include="wwwroot\index.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Include="wwwroot\js\BlazorSupported.js">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BlazorApplicationInsights" Version="1.2.0" />
+		<PackageReference Include="BlazorCurrentDevice" Version="1.0.7" />
+		<PackageReference Include="BlazorStrap" Version="1.5.101-Preview-5" />
+		<PackageReference Include="BuildWebCompiler" Version="1.12.405" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.8" PrivateAssets="all" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+		<PackageReference Include="Telerik.UI.for.Blazor" Version="2.24.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Libs\Common\Core.csproj" />
+	  <ProjectReference Include="..\..\Libs\xServer\xServer.csproj" />
+	  <ProjectReference Include="..\Ux.Common\Ux.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="compilerconfig.json">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Update="Properties\launchSettings.json">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Update="Shared\Index.razor">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Update="Shared\NavMenu.razor">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Update="Shared\TelerikLayout.razor">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Update="Shared\Unsupported.razor">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Update="wwwroot\favicon.ico">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>

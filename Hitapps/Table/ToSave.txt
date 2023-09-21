@@ -1,0 +1,1 @@
+﻿xcopy /Y  $(SolutionDir).build\net5.0\wwwroot\_content\Ux.Core\* $(SolutionDir).build\net5.0\wwwroot\*

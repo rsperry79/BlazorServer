@@ -1,0 +1,24 @@
+﻿@namespace Ux.Core.Components
+
+@code {
+    [Inject]
+    private IBlazorCurrentDeviceService BlazorCurrentDeviceService { get; set; }
+
+    [Inject]
+    private IApplicationInsights AppInsights { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var devtype = await BlazorCurrentDeviceService.Type();
+
+        var Tags = new Dictionary<string, object>()
+            {
+                { "OsType", devtype },
+                { "JudgeId", "Placeholder" },
+                { "HitId", "Placeholder" },
+                {"Location", "PlaceHolder" }
+            };
+
+        await AppInsights.TrackEvent("OSType", Tags);
+    }
+}

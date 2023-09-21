@@ -1,0 +1,19 @@
+﻿@inject INavigationService navigationService
+
+@page "/"
+@page "/index"
+<ApplicationInsights/>
+
+@code {
+    protected override void OnInitialized()
+    {
+        if (localStorageSettings.ShowInstructions)
+        {
+            navigationService.ChangePage("/instructions");
+        }
+        else
+        {
+            navigationService.ChangePage("/hitapp");
+        }
+    }
+}

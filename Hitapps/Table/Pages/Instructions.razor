@@ -1,0 +1,22 @@
+﻿@page "/instructions"
+<PageLabel Header="Instructions" />
+
+<BSCol>
+    <BSCol>
+        <span>
+            You are given a <b>Query</b> and an <b>Answer</b> below. The answer could be a text snippet, a list of items, or a table. You are to judge whether the answer is <b>USEFUL</b>, <b>PARTIALLY USEFUL</b>, or <b>NOT USEFUL</b>.
+        </span>
+        <br />
+        <BSRow>
+            <ul>
+                <li><font color="green">USEFUL: </font>The answer COMPLETELY satisfies the user’s intent. By reading the answer alone, the user can walk away with all the information he or she needs. No other effort is required on the part of the user.</li>
+                <li><font color="orange">PARTIALLY USEFUL: </font>The answer does not meet the bar of a useful one but provides some useful information to the user. The user needs extra work beyond reading the answer text to satisfy his or her need, such as drilling down an article for more information, seeking complementary information elsewhere on the result page, performing more searches, etc.</li>
+                <li><font color="red">NOT USEFUL: </font>The answer does not help the user at all. Reading the answer is a waste of the user’s time. ‘Not useful’ answers come in many flavors, such as incorrect (wrong information), irrelevant (off topic), shallow (e.g. medical questions answered by a first grader), mis-interpretation of user’s intent, etc. If the user intent is to do something other than look for a snippet answer, such as buy something, find a business, navigate to a website, watch a video, find an image, play a game, get background information about a person, etc., mark the answer as Not Useful.</li>
+            </ul>
+        </BSRow>
+        <br />
+        <span>
+            Pay close attention to user’s intent. If user’s intent is not clear from the query itself, please consult the search results page to infer what is the most probable intent, and check if the answer addresses it.
+        </span>
+    </BSCol>
+</BSCol>

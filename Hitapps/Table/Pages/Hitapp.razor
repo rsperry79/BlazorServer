@@ -1,0 +1,54 @@
+﻿@page "/hitapp"
+
+@implements IDisposable
+@inject TableViewModel tableViewModel
+@inject JudgementData judgementData
+
+
+<BSRow>
+    <TextItem Header="Query" Value=@tableViewModel.HitData.Query />
+</BSRow>
+<BSRow>
+    <TextItem Header="Query Location" Value=@tableViewModel.HitData.QLocation />
+</BSRow>
+<BSRow>
+    <HtmlInject Header="Answer" Value=@tableViewModel.HitData.Answer />
+</BSRow>
+<BSRow>
+    <BSCol XS="auto" SM="auto" MD="4" LG="2">
+        <ButtonRepeater Buttons=@buttons @bind-Rating="@judgementData.Rating" />
+    </BSCol>
+
+    <BSCol SM="4" MD="4" LG="4">
+        <TelerikTextArea @bind-Value="judgementData.Comments"
+                         Label="Enter Comments if needed or for other"
+                         AutoSize="true"
+                         AutoComplete="true"
+                         Width="100%">
+        </TelerikTextArea>
+    </BSCol>
+</BSRow>
+
+@code {
+
+    protected override Task OnInitializedAsync()
+    {
+        tableViewModel.OnChange += StateHasChanged;
+        return tableViewModel.GetDataAsync();
+    }
+
+    protected List<IButton> buttons = new()
+    {
+        // The rating doesn't include 0 as it will become the default rating (int defaults to 0)
+        // by not using it, it saves some programming time
+        new Button { Id = "Useful", DisplayName = "Useful", Description = "The results are useful", Value = 3 },
+        new Button { Id = "Partial", DisplayName = "Partially Useful", Description = "The results are partially useful", Value = 2 },
+        new Button { Id = "Bad", DisplayName = "Not Useful", Description = "The results are not useful", Value = 1 },
+        new Button { Id = "Other", DisplayName = "Other", Description = "Unable to rate item", Value = -1 }
+    };
+
+    public void Dispose()
+    {
+        tableViewModel.OnChange -= StateHasChanged;
+    }
+}

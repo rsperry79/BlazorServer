@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "./wwwroot/js/CdnFetch.min.js",
+    "inputFiles": [
+      "wwwroot/js/CdnFetch.js"
+    ]
+  },
+  {
+    "outputFileName": "../../.build/net5.0/wwwroot/js/CdnLoad.min.js",
+    "inputFiles": [
+      "wwwroot/js/CdnLoad.js"
+    ]
+  }
+]

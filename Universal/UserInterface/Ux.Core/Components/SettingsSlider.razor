@@ -1,0 +1,32 @@
+﻿@namespace Ux.Core.Components
+
+<BSCol XS="12" SM="4" MD="4" LG="4">
+    <BSRow>
+        <h4>@Header</h4>
+    </BSRow>
+</BSCol>
+<BSCol XS="12" SM="4" MD="4" LG="4">
+    <BSRow>
+        <TelerikSwitch Value="@SwitchValue" ValueChanged="@(async(bool val) => await ValueChangedHandler(val))" />
+    </BSRow>
+</BSCol>
+<br />
+
+@code {
+    [Parameter]
+    public string Header { get; set; }
+
+
+    [Parameter]
+    public bool SwitchValue { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> SwitchValueChanged { get; set; }
+
+    public async Task ValueChangedHandler(bool value)
+    {
+        SwitchValue = value;
+        await SwitchValueChanged.InvokeAsync(value);
+        return;
+    }
+}

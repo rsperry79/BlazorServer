@@ -1,0 +1,52 @@
+﻿@namespace Ux.Core.Components
+
+
+@using Microsoft.AspNetCore.Components.Web
+@using Ux.Common.Interfaces
+
+
+    @foreach (IButton button in Buttons)
+{
+    <BSRow class="btnSpace">
+        <BSCol>
+            <TelerikButton Id="@button.Id"
+                       Title="@button.Description"
+                       OnClick="@( async() => await ValueChanged(button.Value) )"
+                       Class="@( Rating ==  button.Value? "rating-selected btnFill" : "rating-unselected btnFill" )">
+                @button.DisplayName
+            </TelerikButton>
+        </BSCol>
+    </BSRow>
+}
+
+
+<style>
+    .btnFill {
+        width: 100%;
+    }
+
+    .btnSpace {
+        width: 100%;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+</style>
+
+@code {
+    [Parameter]
+    public List<IButton> Buttons { get; set; }
+
+    [Parameter]
+    public int Rating { get; set; }
+
+    [Parameter]
+    public EventCallback<int> RatingChanged { get; set; }
+
+    public async Task ValueChanged(int sender)
+    {
+        Rating = sender;
+        await RatingChanged.InvokeAsync(sender);
+    }
+}

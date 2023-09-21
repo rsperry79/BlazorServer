@@ -1,0 +1,35 @@
+﻿@page "/settings"
+
+<PageLabel Header="Settings"/>
+<SettingsSlider Header="Show Intructions" @bind-SwitchValue="@localStorageSettings.ShowInstructions" />
+<SettingsSlider Header="Pin Menu" @bind-SwitchValue="@localStorageSettings.PinMenu" />
+
+
+<BSCol XS="12" SM="4" MD="4" LG="4">
+    <BSRow>
+        <label>Reset all settings?</label>
+    </BSRow>
+    <BSRow>
+      <strong>Warning this will reset all settings!</strong>
+    </BSRow>
+    <BSRow>
+        <BSCol>
+            <TelerikButton OnClick=@localStorageSettings.ClearLocalStorage>Reset Settings</TelerikButton>
+        </BSCol>
+    </BSRow>
+</BSCol>
+
+
+
+@code {
+        protected override void OnInitialized()
+        {
+            localStorageSettings.OnChange += StateHasChanged;
+            return;
+        }
+
+        public void Dispose()
+        {
+            localStorageSettings.OnChange -= StateHasChanged;
+        }
+}

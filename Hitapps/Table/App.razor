@@ -1,0 +1,15 @@
+﻿@using Table.Useful.Pages
+@using Ux.Core.Shared
+
+
+<ApplicationInsightsComponent />
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+        <Table.Useful.Pages.Index></Table.Useful.Pages.Index>
+        </LayoutView>
+    </NotFound>
+</Router>

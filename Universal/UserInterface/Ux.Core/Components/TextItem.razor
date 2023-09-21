@@ -1,0 +1,22 @@
+﻿@namespace Ux.Core.Components
+
+<BSRow>
+    <header class="TextItem-Header">@Header</header>
+</BSRow>
+<BSRow>
+    <p class="TextItem-Value">@Value</p>
+</BSRow>
+
+
+@code {
+
+    [Parameter]
+    public string Header { get; set; }
+
+    [Parameter]
+    public string Value { get; set; }
+}
+
+<style>
+
+</style>
