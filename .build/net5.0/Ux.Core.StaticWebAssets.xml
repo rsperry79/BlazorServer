@@ -1,6 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/BlazorApplicationInsights" Path="C:\Users\v-rsperry\.nuget\packages\blazorapplicationinsights\1.2.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/BlazorCurrentDevice" Path="C:\Users\v-rsperry\.nuget\packages\blazorcurrentdevice\1.0.7\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/BlazorStrap" Path="C:\Users\v-rsperry\.nuget\packages\blazorstrap\1.5.101-preview-5\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/Telerik.UI.for.Blazor" Path="C:\Users\v-rsperry\.nuget\packages\telerik.ui.for.blazor\2.24.0\build\..\staticwebassets\" />
-</StaticWebAssets>
